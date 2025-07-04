@@ -1,103 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-	 <meta http-equiv="x-UA-compatible"content="IE=edge">
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title> 
-	 Shri Bhairav Dham Sarkar.
-	 </title>
-	 <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Bhairav Dham Sarkar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @layer utilities {
+            .scroll-mt-24 {
+                scroll-margin-top: 6rem;
+            }
+        }
+		
+		 .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #FF0000, #8B0000);
+            font-size: 20px;
+            padding: 12px 35px;
+            border-radius: 50px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #8B0000, #FF0000);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        
+        .btn:hover::after {
+            opacity: 1;
+        }
+        
+        hr {
+            width: 60%;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(139, 0, 0, 0), rgba(139, 0, 0, 0.75), rgba(139, 0, 0, 0));
+            margin: 40px auto;
+        }
+        
+        .links {
+            text-align: center;
+            margin-bottom: 80px;
+            font-size: 1.6em;
+        }
+        
+        .links a {
+            padding: 0 30px;
+            text-decoration: none;
+            color: #8aadda;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .links a:hover {
+            color: #8B0000;
+            transform: translateY(-2px);
+        }
+        
+        .links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        
+        .links a:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body>
-<div style="text-align:center;margin-top:50px;"> 
-<img style="width:15%;" src="logooo.png">
-</div>
-<div style="text-align:center;">
-<img src="titlee.jpg">
-</div>
-<h1 style="font-size:1.8em; text-align:center;">"SHRI BHAIRAV DHAM SARKAR"</h1>
-<p style="fontsize:1.0em;text-align:center;margin-bottom:20px;margin-top:20px;">
-कलयुग की दुनिया में श्री बटुकभैरव जी महाराज का<br>
-एकमात्र दिव्यदर्शी दरबार जहाँ आज भी चैलेंज के साथ आपका भूत, भविष्य , वर्तमान बताया जाता हैं<br> या फिर मनुष्य जीवन से जुड़ी कोई भी समस्या हो उसका उत्तर व समाधान आपके पूछने से पहले लिख दिया जाता हैं <br>यह दरबार हर महीने की अमावस्या तिथि को श्री भैरव धाम सिद्धपीठ आश्रम (लोहागढ़) में लगता है आप सभी आमंत्रित है।<br>
-</p>
-<div style="text-align:center;margin-bottom: 50px;margin-top: 30px;">
  
- <a style="text-decoration:none;color:white;background-color:red;color:white;font-size:20px;padding: 10px 30px 10px 30px; " href="obout.html">ABOUT</a>
- 
-</div>
- 
-<hr style="width:60%;">
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header with Theme Toggle -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="logooo.png" alt="Logo" class="w-12 h-12">
+                <span class="text-xl font-bold">श्री भैरव धाम सरकार</span>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                <i class="fas fa-sun dark:hidden"></i>
+                <i class="fas fa-moon hidden dark:block"></i>
+            </button>
+        </div>
+    </header>
+	<div style="text-align:center;">
+        <a class="btn" href="NEW2.html">ABOUT</a>
+    </div>
+    
+    <hr>
+    
+    <div class="links">
+        <a href="NEW.html">HOME</a>
+        <a href="NEW3.html">CONTACT</a>
+        <a href="NEW44.html">DONATE</a>
+    </div>
 
-<div class="links" style="text-align:center;margin-bottom: 80px;font-size:1.6em;">
-<a style="padding-right: 70px; text-decoration:none;color:#8aadda; " href="index.html">HOME</a>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Logo and Title -->
+        <div class="text-center mb-8">
+            <img src="titlee.jpg" alt="Title" class="mx-auto mb-4 rounded-lg shadow-lg">
+            <h1 class="text-2xl md:text-3xl font-bold mb-6">"श्री भैरव धाम सरकार"</h1>
+        </div>
 
+        <!-- Dropdown Menu -->
+        <div class="text-center mb-12">
+            <select class="w-full max-w-md mx-auto p-3 text-lg md:text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                <option>Content</option>
+                <option class="text-red-600">हस्त रेखा ज्ञान</option>
+                <option class="text-red-600">उनसे बात करें</option>
+                <option class="text-red-600">नकारात्मक ऊर्जा</option>
+                <option class="text-red-600">भविष्य की सलाह</option>
+				 <option class="text-red-600">हस्त रेखा ज्ञान</option>
+  <option class="text-red-600">उनसे बात करें</option>
+  <option class="text-red-600">नकारात्मक ऊर्जा</option>
+  <option class="text-red-600">भविष्य की सलाह</option>
+  <option class="text-red-600">राशिफल</option>
+  <option class="text-red-600">कुंडली मिलान</option>
+  <option class="text-red-600">वास्तु सलाह</option>
+  <option class="text-red-600">भाग्य परिवर्तन उपाय</option>
+  <option class="text-red-600">स्वप्न विचार</option>
+  <option class="text-red-600">टोटके और उपाय</option>
+  <option class="text-red-600">मंत्र जाप सलाह</option>
+  <option class="text-red-600">पारिवारिक समस्याएं</option>
+  <option class="text-red-600">प्रेम जीवन की दिशा</option>
+  <option class="text-red-600">सकारात्मक ऊर्जा प्राप्त करें</option>
+            </select>
+        </div>
 
- <a style="padding-right: 0px;text-decoration:none; color:#8aadda; " href="contect.html";>CONTECT</a>
- 
+        <!-- Contact Button -->
+        <div class="text-center mb-12">
+            <button onclick="window.location.href='https://wa.me/918103078624?text=नमस्ते%20मैं%20आपसे%20संपर्क%20करना%20चाहता%20हूं'"
+    
+ class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                संपर्क करें
+            </button>
+        </div>
 
- <a style="padding-left: 70px;text-decoration:none;color:#8aadda;  " href="donet.html">DONATE</a>
-</div>
+        <!-- Contact Information -->
+        <div class="text-center max-w-2xl mx-auto">
+            <details class="text-lg md:text-xl mb-6">
+                <summary class="cursor-pointer font-medium">यदि आपने चुना है, तो आप क्या चर्चा करना चाहेंगे?</summary>
+                <p class="mt-2">अब आप नीचे दिए गए नंबर पर कॉल करके किसी भी विषय पर चर्चा कर सकते हैं:</p>
+            </details>
+            <h1 class="text-3xl md:text-4xl font-bold text-red-600">
+                <a href="tel:+918103078624" class="hover:underline">+91 8103078624</a>
+            </h1>
+        </div>
+    </main>
 
-  
-<img style="width: 21%;" src="anshesh3.jpg">
-<img style="width: 28%;" src="anshesh1.jpg">
-<img style="width: 41%;" src="anshesh2.jpg"><br>
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-600 dark:text-gray-400">
+            © 2023 श्री भैरव धाम सरकार. सभी अधिकार सुरक्षित।
+        </div>
+    </footer>
 
-</div>
-<div style=text-align:center;>
-<select style="font-size:1.9em;text-align:center;margin-top:50px;margin-bottom:50px;"> 
-
-<option>Content</option>
-<option style="color:red;">HASTH REKHA GYAN</option>
-<option style="color:red;">DISCUSS TO HIM</option>
-<option style="color:red;">NIGETIV ENERGY</option>
-<option style="color:red;">FEUTURE SUGGEST</option>
-<option style="color:red;">HAVAN</option>
-<option style="color:red;">WARSIP PROGRAM</option>
-<option style="color:red;">INVITE</option>
-<option style="color:red;">NAM KARAD</option>
-<option style="color:red;">MAHURAT DESIDE</option>
-<option style="color:red;">KATHA</option>
-<option style="color:red;">PRAVACHAN IN HOME</option>
-<option style="color:red;">KUNDLI MATCHING</option>
-
-
-
-</select>
-</div>
-
-<div style="font-size:2.9em;text-align:center;margin-bottom:20px;font-size:2.5em;">
-<button>CONTECT</button>
-
-</div>
-
-<div style="text-align:center;font-size:1.0em;">
-
-<details style="font-size:1.5em">If you had choosed, what would you want to Discuss.<br>
- Soo now you can discuss to him for any content by contect in this number :----
- </details>
- </div>
- 
- 
- <h1 style="color:red;font-size:2.8em; text-align:center";> +91 8103078624</h1>
- 
- 
- 
- 
- 
- 
- 
- <p style="font-size:1.0em; text-align:center;margin-right: 20px;padding-right: 20px;">If you want to CONTECT HIM, <br>
-  
-  .So their is some few steps to contect him::---<br></p>
-  <ul>
-  
-  
-  <li>"CLICK TO THE CONTECT LINK, BOTTOM ON THE WEBPAGE"</li>
-  <li>"CHOOS YOUR FAVRATE Activity"</li>
-  <li>"CONTECT FROM THE BLOW NUMBER"</li>
-  <li>"AND THEN ENJOY"</li>
-  </ul>
-  <hr>
-  <h6 style=text-align:center;>------------:"Thanks For Wisiting Shri bhairav dham sarkar":------------
+    <!-- JavaScript -->
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+    </script>
+</body>
+</html>
+```
