@@ -337,7 +337,56 @@
     
     <h6>------------:"Thanks For Visiting Shri Bhairav Dham Sarkar":------------</h6>
 
-    
+    <script>
+function showSignUp() {
+  document.getElementById("signupForm").style.display = "block";
+  document.getElementById("signinForm").style.display = "none";
+}
+
+function showSignIn() {
+  document.getElementById("signupForm").style.display = "none";
+  document.getElementById("signinForm").style.display = "block";
+}
+
+function signUp() {
+  const username = document.getElementById("newUsername").value;
+  const password = document.getElementById("newPassword").value;
+
+  if (username && password) {
+    // Save to localStorage (just for demo)
+    localStorage.setItem("savedUsername", username);
+    localStorage.setItem("savedPassword", password);
+    document.getElementById("signupStatus").innerText = "Sign Up Successful! Now sign in.";
+    document.getElementById("signupStatus").style.color = "green";
+  } else {
+    document.getElementById("signupStatus").innerText = "Please fill all fields!";
+    document.getElementById("signupStatus").style.color = "red";
+  }
+}
+
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const savedUsername = localStorage.getItem("savedUsername");
+  const savedPassword = localStorage.getItem("savedPassword");
+
+  if (username === savedUsername && password === savedPassword) {
+    document.getElementById("status").innerText = "Login successful!";
+    document.getElementById("status").style.color = "green";
+    document.getElementById("logoutBtn").style.display = "block";
+  } else {
+    document.getElementById("status").innerText = "Invalid credentials!";
+    document.getElementById("status").style.color = "red";
+  }
+}
+
+function logout() {
+  document.getElementById("status").innerText = "Signed out successfully!";
+  document.getElementById("status").style.color = "green";
+  document.getElementById("logoutBtn").style.display = "none";
+}
+</script>
     	
     
 </body>
