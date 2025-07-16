@@ -186,6 +186,35 @@
         }
     </style>
 </head>
+
+
+    <!-- Sign Up and Sign In buttons -->
+<button class="signin-toggle" onclick="showSignUp()">Sign Up</button>
+<button class="signin-toggle" onclick="showSignIn()">Sign In</button>
+
+<!-- Sign Up Form -->
+<div class="login-container" id="signupForm" style="display: none;">
+  <h2>Create Account</h2>
+  <input type="text" id="newUsername" placeholder="Choose a Username">
+  <input type="password" id="newPassword" placeholder="Choose a Password">
+  <button onclick="signUp()">Register</button>
+  <p id="signupStatus"></p>
+</div>
+
+<!-- Sign In Form -->
+<div class="login-container" id="signinForm" style="display: none;">
+  <h2>Welcome Back</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Sign In</button>
+  <p id="status"></p>
+  <button id="logoutBtn" onclick="logout()" style="display: none;">Sign Out</button>
+</div>
+
+
+
+
+    
 <body>
     <div style="text-align:center;margin-top:50px;"> 
         <img class="logo" src="logooo.png" alt="Shri Bhairav Dham Logo">
