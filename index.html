@@ -5,98 +5,7 @@
     <style>
 
 
-        .signin-toggle {
-  background-color: white;
-  color: #0072ff;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 2px solid #0072ff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 10px;
-}
-
-.signin-toggle:hover {
-  background-color: #0072ff;
-  color: white;
-}
-
-.login-container {
-  background-color: white;
-  padding: 30px 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 300px;
-  animation: fadeIn 0.4s ease;
-  margin-top: 20px;
-}
-
-.login-container input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 8px;
-  background: #f1f1f1;
-  font-size: 16px;
-}
-
-.login-container button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0072ff;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
-
-.login-container button:hover {
-  background-color: #005ec2;
-}
-
-#status, #signupStatus {
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-
-
-
-
-
-        <!-- Sign Up and Sign In buttons -->
-<button class="signin-toggle" onclick="showSignUp()">Sign Up</button>
-<button class="signin-toggle" onclick="showSignIn()">Sign In</button>
-
-<!-- Sign Up Form -->
-<div class="login-container" id="signupForm" style="display: none;">
-  <h2>Create Account</h2>
-  <input type="text" id="newUsername" placeholder="Choose a Username">
-  <input type="password" id="newPassword" placeholder="Choose a Password">
-  <button onclick="signUp()">Register</button>
-  <p id="signupStatus"></p>
-</div>
-
-<!-- Sign In Form -->
-<div class="login-container" id="signinForm" style="display: none;">
-  <h2>Welcome Back</h2>
-  <input type="text" id="username" placeholder="Username">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">Sign In</button>
-  <p id="status"></p>
-  <button id="logoutBtn" onclick="logout()" style="display: none;">Sign Out</button>
-</div>
+    
 
 
 
@@ -335,56 +244,7 @@
     <h6>------------:"Thanks For Visiting Shri Bhairav Dham Sarkar":------------</h6>
 
     
-    	<script>
-function showSignUp() {
-  document.getElementById("signupForm").style.display = "block";
-  document.getElementById("signinForm").style.display = "none";
-}
-
-function showSignIn() {
-  document.getElementById("signupForm").style.display = "none";
-  document.getElementById("signinForm").style.display = "block";
-}
-
-function signUp() {
-  const username = document.getElementById("newUsername").value;
-  const password = document.getElementById("newPassword").value;
-
-  if (username && password) {
-    // Save to localStorage (just for demo)
-    localStorage.setItem("savedUsername", username);
-    localStorage.setItem("savedPassword", password);
-    document.getElementById("signupStatus").innerText = "Sign Up Successful! Now sign in.";
-    document.getElementById("signupStatus").style.color = "green";
-  } else {
-    document.getElementById("signupStatus").innerText = "Please fill all fields!";
-    document.getElementById("signupStatus").style.color = "red";
-  }
-}
-
-function login() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  const savedUsername = localStorage.getItem("savedUsername");
-  const savedPassword = localStorage.getItem("savedPassword");
-
-  if (username === savedUsername && password === savedPassword) {
-    document.getElementById("status").innerText = "Login successful!";
-    document.getElementById("status").style.color = "green";
-    document.getElementById("logoutBtn").style.display = "block";
-  } else {
-    document.getElementById("status").innerText = "Invalid credentials!";
-    document.getElementById("status").style.color = "red";
-  }
-}
-
-function logout() {
-  document.getElementById("status").innerText = "Signed out successfully!";
-  document.getElementById("status").style.color = "green";
-  document.getElementById("logoutBtn").style.display = "none";
-}
-</script>
+    	
     
 </body>
 </html>
