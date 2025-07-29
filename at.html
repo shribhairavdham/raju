@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shri Bhairav Dham Sarkar</title>
+    <style>
+	
+	
+	
+
+
+
+
+
+
+
+.signin-toggle {
+  background-color: white;
+  color: #0072ff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #0072ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.signin-toggle:hover {
+  background-color: #0072ff;
+  color: white;
+}
+
+.login-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+  animation: fadeIn 0.4s ease;
+  margin-top: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #f1f1f1;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0072ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #005ec2;
+}
+
+#status, #signupStatus {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+
+
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #a1a1f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .logo {
+            width: 15%;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        h1 {
+            font-size: 1.8em;
+            text-align: center;
+            color: #8B0000;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        p {
+            font-size: 1.0em;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #FF0000, #8B0000);
+            font-size: 20px;
+            padding: 12px 35px;
+            border-radius: 50px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #8B0000, #FF0000);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        
+        .btn:hover::after {
+            opacity: 1;
+        }
+        
+        hr {
+            width: 60%;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(139, 0, 0, 0), rgba(139, 0, 0, 0.75), rgba(139, 0, 0, 0));
+            margin: 40px auto;
+        }
+        
+        .links {
+            text-align: center;
+            margin-bottom: 80px;
+            font-size: 1.6em;
+        }
+        
+        .links a {
+            padding: 0 30px;
+            text-decoration: none;
+            color: black;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .links a:hover {
+            color: #8B0000;
+            transform: translateY(-2px);
+        }
+        
+        .links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        
+        .links a:hover::after {
+            width: 100%;
+        }
+        
+        img {
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.02);
+        }
+        
+        video {
+            width: 40%;
+            margin: 50px auto 20px;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        video:hover {
+            transform: scale(1.01);
+        }
+        
+        ul {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        li::before {
+            content: "•";
+            color: #8B0000;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        h6 {
+            text-align: center;
+            color: #8B0000;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+		
+		
+
+
+
+
+
+
+
+:root {
+      --neon-red: #ff0066;
+      --neon-blue: #00ffff;
+      --neon-green: #00ff88;
+      --dark-bg: #0d0d0d;
+      --card-bg: rgba(20, 20, 40, 0.85);
+    }
+
+   
+
+    header {
+      text-align: center;
+      padding: 2rem 0 1rem;
+    }
+
+    .logo {
+      font-size: 3rem;
+      color: var(--neon-red);
+      text-shadow: 0 0 15px var(--neon-red);
+    }
+
+    .search-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 13, 13, 0.95);
+      padding: 1rem;
+      border-bottom: 1px solid var(--neon-blue);
+    }
+
+    .search-container {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 12px 20px 12px 40px;
+      border-radius: 30px;
+      border: none;
+      background: rgba(40, 40, 60, 0.9);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-container::before {
+      content: '🔍';
+      position: absolute;
+      left: 15px;
+      top: 10px;
+    }
+
+    .featured {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .featured h2 {
+      font-size: 2rem;
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .featured-games {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .game-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      width: 280px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+      position: relative;
+    }
+
+    .game-card:hover {
+      transform: translateY(-30px);
+      box-shadow: 0 0 50px rgba(0, 255, 136, 0.4);
+    }
+
+    .game-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .game-info {
+      padding: 1rem;
+    }
+
+    .game-title {
+      font-size: 1.2rem;
+      color: var(--neon-green);
+    }
+
+    .game-desc {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: linear-gradient(to right, var(--neon-blue), var(--neon-green));
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .rating-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--neon-blue);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      box-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 2rem;
+      font-size: 1rem;
+    }
+	.top-links {
+  text-align: center;
+  background: #111;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--neon-blue);
+}
+
+.top-links a {
+  margin: 0 15px;
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.top-links a:hover {
+  color: var(--neon-green);
+}
+ 
+ 
+ 
+.btn123 {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #FF0000, #8B0000);
+            font-size: 20px;
+            padding: 12px 35px;
+            border-radius: 50px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn123:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+        }
+        
+        .btn123:active {
+            transform: translateY(1px);
+        }
+        
+        .btn123::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #8B0000, #FF0000);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        
+        .btn123:hover::after {
+            opacity: 1;
+        }
+   
+
+
+  
+	
+	
+	
+	
+
+
+    </style>
+</head>
+<body>
+
+
+
+<!-- Sign Up and Sign In buttons -->
+<button class="signin-toggle" onclick="showSignUp()">Sign Up</button>
+<button class="signin-toggle" onclick="showSignIn()">Sign In</button>
+
+<!-- Sign Up Form -->
+<div class="login-container" id="signupForm" style="display: none;">
+  <h2>Create Account</h2>
+  <input type="text" id="newUsername" placeholder="Choose a Username">
+  <input type="password" id="newPassword" placeholder="Choose a Password">
+  <button onclick="signUp()">Register</button>
+  <p id="signupStatus"></p>
+</div>
+
+<!-- Sign In Form -->
+<div class="login-container" id="signinForm" style="display: none;">
+  <h2>Welcome Back</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button class="btn1234" onclick="login()">Sign In</button>
+  <p id="status"></p>
+  <button id="logoutBtn" onclick="logout()" style="display: none;">Sign Out</button>
+</div>
+
+<div id="loginForm">
+  <h2 >Sign In</h2>
+ 
+  <but ton  onclick="login()"></button>
+</div>
+
+<div id="welcomeMessage" style="display:none;">
+  <h2>Welcome, <span id="userDisplay"></span>!</h2>
+  <p>Your ID: <strong id="userIdDisplay"></strong></p>
+  <button class="btn123" onclick="logout()">Sign Out</button>
+</div>
+
+<h2>Your Activity:</h2>
+<ul id="activityList"></ul>
+
+
+
+    <div style="text-align:center;margin-top:50px;"> 
+        <img class="logo" src="logooo.png" alt="Shri Bhairav Dham Logo">
+    </div>
+    
+    <div style="text-align:center;">
+        <img src="titlee.jpg" alt="Title Image">
+    </div>
+    
+    <h1>"SHRI BHAIRAV DHAM SARKAR"</h1>
+    
+    <p>
+        कलयुग की दुनिया में श्री बटुकभैरव जी महाराज का<br>
+        एकमात्र दिव्यदर्शी दरबार जहाँ आज भी चैलेंज के साथ आपका भूत, भविष्य , वर्तमान बताया जाता हैं<br> या फिर मनुष्य जीवन से जुड़ी कोई भी समस्या हो उसका उत्तर व समाधान आपके पूछने से पहले लिख दिया जाता हैं <br>यह दरबार हर महीने की अमावस्या तिथि को श्री भैरव धाम सिद्धपीठ आश्रम (लोहागढ़) में लगता है आप सभी आमंत्रित है।<br>पता- श्री भैरव धाम सिद्धपीठ आश्रम तहसील मोठ <br> जिला झांसी उत्तरप्रदेश। नज़दीक रेलवे स्टेशन झाँसी जंक्शन उत्तर प्रदेश से 82 k.m. की दूरी पर है!
+    </p>
+    
+    <div style="text-align:center;">
+        <a class="btn" href="obout.html">ABOUT</a>
+    </div>
+    
+    <hr>
+    
+    <div class="links">
+        <a href="index.html">HOME</a>
+        <a href="contect.html">CONTACT</a>
+        <a href="donet.html">DONATE</a>
+    </div>
+	
+	 <div class="search-bar">
+    <div class="search-container">
+      <input type="text" id="gameSearch" placeholder="Search games..." onkeyup="filterGames()">
+    </div>
+  </div>
+  
+  
+
+  <section class="featured">
+    <h2>#TOP - VIDEOS</h2>
+    <div class="featured-games" id="gameList">
+      <!-- Add 8 game cards here -->
+      <!-- Same as before, just copy and update titles/images/links -->
+      <!-- Example below -->
+      <div class="game-card">
+        <span class="rating-badge">⭐ 4.8</span>
+        <img src="v.jpg" alt="Free Fire" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">Simple Swarnakarshan Bhairav Sadhana</h3>
+          <p class="game-desc">सरल स्वर्णाकर्षण भैरव साधना | Simple Swarnakarshan Bhairav Sadhana | संपूर्ण साधना विधि |</p>
+          <a href="https://www.youtube.com/watch?v=le7TjAJbzo4" class="download-btn">Views</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <span class="rating-badge">⭐ 4.7</span>
+        <img src="vv1.jpg" alt="PUBG Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">Divya Darbar</h3>
+          <p class="game-desc">दिव्यदर्शी दरबार में हो जाता है हर समस्या का समाधान || अर्जी लगते ही मिलते हैं संकेत ||</p>
+          <a href="https://www.youtube.com/watch?v=ao_pfR5Qe48" class="download-btn">Views</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <span class="rating-badge">⭐ 4.6</span>
+        <img src="vv2.jpg" alt="Call of Duty Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">bhairavdhamsarkar</h3>
+          <p class="game-desc">कैसे हुए महाराज श्री को भैरव के दर्शन | भैरव दर्शन | ‪@bhairavdhamsarkar‬</p>
+          <a href="https://www.youtube.com/watch?v=pdKfpr3Ljic&t=81s" class="download-btn">Views</a>
+        </div>
+      </div>
+	  
+	  <div class="game-card">
+        <span class="rating-badge">⭐ 4.6</span>
+        <img src="vv10.jpg" alt="Call of Duty Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">Interview 
+</h3>
+          <p class="game-desc">श्री भैरव धाम सरकार के गुरु जी से न्यूज़ रिपोर्टर की खास बातचीत.....!</p>
+          <a href="https://www.youtube.com/watch?v=Gb2mnpDpD6U" class="download-btn">Views</a>
+        </div>
+      </div>
+	  
+	  <div class="game-card">
+        <span class="rating-badge">⭐ 4.6</span>
+        <img src="vv4.jpg" alt="Call of Duty Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title"> Divya Darbar
+ </h3>
+          <p class="game-desc"> दिव्य दरबार में हुआ खुलासा डेढ़ लाख रुपये देवता के खाकर परेशान हो रहा है!</p>
+          <a href="https://www.youtube.com/watch?v=J3KhOsK6GXw&t=33s" class="download-btn">Views</a>
+        </div>
+      </div>
+	  
+	  <div class="game-card">
+        <span class="rating-badge">⭐ 4.6</span>
+        <img src="vv7.jpg" alt="Call of Duty Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">New moon divine </h3>
+          <p class="game-desc">अमावस्या दिव्यदर्शी दरबार.......#दिव्यदरवार</p>
+          <a href="https://www.youtube.com/watch?v=lnmmFWZjKXs" class="download-btn">Views</a>
+        </div>
+      </div>
+	  
+	  <div class="game-card">
+        <span class="rating-badge">⭐ 4.6</span>
+        <img src="vv5.jpg" alt="Call of Duty Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">Nigetive enargy 
+
+
+</h3>
+          <p class="game-desc">Bio: घर में भूत है कैसे जानें ! #दिव्यदरवार</p>
+          <a href="https://www.youtube.com/watch?v=ZwHZ_BncJdA" class="download-btn">Views</a>
+        </div>
+      </div>
+	  
+	  <div class="game-card">
+        <span class="rating-badge">⭐ 4.6</span>
+        <img src="vv6.jpg" alt="Call of Duty Mobile" class="game-img" />
+        <div class="game-info">
+          <h3 class="game-title">Masan and Kalka attacked
+
+
+ </h3>
+          <p class="game-desc">Bio:  मसान और कालका ने एक साथ किया हमला.....Masan and Kalka attacked together...</p>
+          <a href="https://play.google.com/store/apps/details?id=com.pixel.gun3d" class="download-btn">Views</a>
+        </div>
+      </div>
+	  
+	  
+      <!-- Add more game cards below (4th to 8th) -->
+      <!-- Replace placeholders with real game info/images -->
+    </div>
+  </section>
+<div >
+ 
+  <footer style="background-color:red;">
+     ------------:"Thanks For Visiting Shri Bhairav Dham Sarkar":------------
+  </footer>
+<div>
+
+  <script>
+	
+	
+	
+	   function filterGames() {
+      const input = document.getElementById('gameSearch');
+      const filter = input.value.toLowerCase();
+      const cards = document.getElementById('gameList').getElementsByClassName('game-card');
+
+      for (let i = 0; i < cards.length; i++) {
+        const title = cards[i].querySelector(".game-title").innerText.toLowerCase();
+        if (title.includes(filter)) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+	
+	
+	 let user = localStorage.getItem("loggedInUser");
+  if (user) {
+    let activities = JSON.parse(localStorage.getItem("activities_" + user)) || [];
+    let list = document.getElementById("activityList");
+    activities.forEach(act => {
+      let li = document.createElement("li");
+      li.innerText = act;
+      list.appendChild(li);
+    });
+  }
+  
+  
+  function saveActivity(action) {
+  let user = localStorage.getItem("loggedInUser");
+  if (!user) return;
+
+  let activities = JSON.parse(localStorage.getItem("activities_" + user)) || [];
+  let time = new Date().toLocaleString();
+  activities.push(`${action} at ${time}`);
+
+  localStorage.setItem("activities_" + user, JSON.stringify(activities));
+}
+
+
+
+
+
+function showSignUp() {
+  document.getElementById("signupForm").style.display = "block";
+  document.getElementById("signinForm").style.display = "none";
+}
+
+function showSignIn() {
+  document.getElementById("signupForm").style.display = "none";
+  document.getElementById("signinForm").style.display = "block";
+}
+
+function signUp() {
+  const username = document.getElementById("newUsername").value;
+  const password = document.getElementById("newPassword").value;
+
+  if (username && password) {
+    // Save to localStorage (just for demo)
+    localStorage.setItem("savedUsername", username);
+    localStorage.setItem("savedPassword", password);
+    document.getElementById("signupStatus").innerText = "Sign Up Successful! Now sign in.";
+    document.getElementById("signupStatus").style.color = "green";
+  } else {
+    document.getElementById("signupStatus").innerText = "Please fill all fields!";
+    document.getElementById("signupStatus").style.color = "red";
+  }
+}
+
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const savedUsername = localStorage.getItem("savedUsername");
+  const savedPassword = localStorage.getItem("savedPassword");
+
+  if (username === savedUsername && password === savedPassword) {
+    document.getElementById("status").innerText = "Login successful!";
+    document.getElementById("status").style.color = "green";
+    document.getElementById("logoutBtn").style.display = "block";
+  } else {
+    document.getElementById("status").innerText = "Invalid credentials!";
+    document.getElementById("status").style.color = "red";
+  }
+}
+
+function logout() {
+  document.getElementById("status").innerText = "Signed out successfully!";
+  document.getElementById("status").style.color = "green";
+  document.getElementById("logoutBtn").style.display = "none";
+}
+
+
+
+
+  // On page load check
+  window.onload = function () {
+    const savedUser = localStorage.getItem("loggedInUser");
+    const savedId = localStorage.getItem("userId");
+    if (savedUser && savedId) {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("welcomeMessage").style.display = "block";
+      document.getElementById("userDisplay").innerText = savedUser;
+      document.getElementById("userIdDisplay").innerText = savedId;
+    }
+  };
+
+  function login() {
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value;
+
+    if (user && pass) {
+      // Generate ID (based on username + random number)
+      const userId = "USR-" + user.substring(0, 3).toUpperCase() + "-" + Math.floor(1000 + Math.random() * 9000);
+
+      localStorage.setItem("loggedInUser", user);
+      localStorage.setItem("userId", userId);
+
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("welcomeMessage").style.display = "block";
+      document.getElementById("userDisplay").innerText = user;
+      document.getElementById("userIdDisplay").innerText = userId;
+    } else {
+      alert("Please enter both username and password.");
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("userId");
+    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("welcomeMessage").style.display = "none";
+  }
+
+
+</script>
+</body>
+</html>
