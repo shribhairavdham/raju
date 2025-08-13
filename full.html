@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shri Bhairav Dham Sarkar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8B0000;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background: #fff7e6;
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #8B0000;
+      margin: 0 20px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #b30000;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .glow-img {
+      width: 220px;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+      transition: transform 0.3s;
+    }
+
+    .glow-img:hover {
+      transform: scale(1.05);
+    }
+
+    .auth-section, .upload-section {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px auto;
+      max-width: 450px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #8B0000;
+      color: white;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #b30000;
+      transform: scale(1.03);
+    }
+
+    #photoGallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 30px 10px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .photo-card img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .photo-card h4 {
+      margin: 10px 0 0;
+      font-size: 17px;
+      color: #333;
+    }
+
+    footer {
+      background-color: #8B0000;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .glow-img {
+        width: 160px;
+      }
+
+      .auth-section, .upload-section {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+
+    .stylish-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 18px;
+      font-size: 16px;
+      color: #333;
+      background-color: #fdfdfd;
+      border: 2px solid #8B0000;
+      border-radius: 8px;
+      outline: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(139, 0, 0, 0.1);
+    }
+
+    .stylish-input:focus {
+      border-color: #B22222;
+      box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+      background-color: #fffefc;
+    }
+
+    .stylish-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #8B0000;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sign In Form -->
+<div id="signinSection" style="text-align:center; margin-top:30px;">
+  <h3>🔐 Sign In</h3>
+  <input class="stylish-label" type="text" id="usernameInput" placeholder="Enter your username">
+  <button onclick="signIn()">Sign In</button>
+</div>
+
+<!-- Upload Section (only visible for admin) -->
+<div id="uploadSection" style="display:none; text-align:center; margin-top:30px;">
+  <h3>📤 Upload Photo (Admin Only)</h3>
+  <input type="file" id="photoInput"><br><br>
+  <input type="text" id="photoTitle" placeholder="Enter photo title"><br><br>
+  <button onclick="uploadPhoto()">Upload</button>
+</div>
+
+<!-- Display Uploaded Photos -->
+<div id="photoGallery" style="text-align:center; margin-top:40px;">
+  <h2>📸 फोटो गैलरी</h2>
+</div>
+
+<!-- Marquee -->
+<marquee>🙏 अगला भंडारा: रविवार 4 अगस्त को | सभी भक्तों का स्वागत है! 🙏</marquee>
+
+<!-- Header -->
+<header>
+  <h1>श्री भैरव धाम सरकार</h1>
+</header>
+
+<!-- Nav -->
+<nav>
+  <a href="#">मुखपृष्ठ</a>
+  <a href="#">फोटो</a>
+  <a href="#">वीडियो</a>
+  <a href="#">सम्पर्क</a>
+</nav>
+
+<!-- Bhakti Quote -->
+<h3 id="bhaktiQuote"></h3>
+
+<!-- Main Content -->
+<main>
+  <h2>🙏 श्री भैरव जी की आरती 🎵</h2>
+  <audio controls>
+    <source src="bhajan.mp3" type="audio/mpeg">
+    आपका ब्राउज़र ऑडियो सपोर्ट नहीं करता।
+  </audio>
+  <img src="logooo.png" class="glow-img" alt="Bhairav Ji">
+</main>
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top">⬆️</button>
+
+<!-- Footer -->
+<footer>
+  © 2025 श्री भैरव धाम सरकार | Designed by Anshesh Rajawat
+</footer>
+
+<script>
+  function signIn() {
+    const username = document.getElementById("usernameInput").value.trim();
+    if (username) {
+      localStorage.setItem("signedInUser", username);
+      alert("Signed in as " + username);
+      showSections(username);
+    } else {
+      alert("Please enter a username.");
+    }
+  }
+
+  function showSections(username) {
+    if (username === "admin") {
+      document.getElementById("uploadSection").style.display = "block";
+    }
+    loadPhotos();
+  }
+
+  function uploadPhoto() {
+    const fileInput = document.getElementById("photoInput");
+    const title = document.getElementById("photoTitle").value.trim();
+    const reader = new FileReader();
+
+    reader.onload = function () {
+      const photos = JSON.parse(localStorage.getItem("uploadedPhotos") || "[]");
+      photos.push({ title: title, url: reader.result });
+      localStorage.setItem("uploadedPhotos", JSON.stringify(photos));
+      loadPhotos();
+    };
+
+    if (fileInput.files[0]) {
+      reader.readAsDataURL(fileInput.files[0]);
+    } else {
+      alert("Please select a photo");
+    }
+  }
+
+  function loadPhotos() {
+    const gallery = document.getElementById("photoGallery");
+    const photos = JSON.parse(localStorage.getItem("uploadedPhotos") || "[]");
+    const currentUser = localStorage.getItem("signedInUser");
+
+    let html = "<h2>📸 फोटो गैलरी</h2>";
+    photos.forEach((p, index) => {
+      html += `<div style="margin:20px;">
+                 <h4>${p.title}</h4>
+                 <img src="${p.url}" style="max-width:300px; border-radius:10px; box-shadow:0 0 15px #aaa;">
+                 ${currentUser === "admin" ? `<br><button onclick="deletePhoto(${index})" style="margin-top:10px; background-color:red; color:white; padding:5px 10px; border:none; border-radius:5px; cursor:pointer;">🗑 Delete</button>` : ""}
+               </div>`;
+    });
+    gallery.innerHTML = html;
+  }
+
+  function deletePhoto(index) {
+    const photos = JSON.parse(localStorage.getItem("uploadedPhotos")) || [];
+    photos.splice(index, 1);
+    localStorage.setItem("uploadedPhotos", JSON.stringify(photos));
+    loadPhotos();
+  }
+
+  window.onload = function () {
+    const username = localStorage.getItem("signedInUser");
+    if (username) {
+      document.getElementById("usernameInput").value = username;
+      showSections(username);
+    }
+    const quotes = [
+      "🙏 जय श्री भैरव! संकट हरने वाले की जय।",
+      "🕉️ शक्ति और भक्ति का एकमात्र स्थान - श्री भैरव धाम।",
+      "🌟 भक्ति में शक्ति है, और शक्ति में भैरव हैं।",
+      "🔱 हर अमावस्या, आइए श्री भैरव धाम दर्शन को।"
+    ];
+    document.getElementById("bhaktiQuote").innerText =
+      quotes[Math.floor(Math.random() * quotes.length)];
+  };
+
+  const topBtn = document.getElementById("backToTopBtn");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
