@@ -413,7 +413,7 @@
                 const hours = String(now.getHours()).padStart(2, '0');
                 const minutes = String(now.getMinutes()).padStart(2, '0');
                 
-                const generatedId = BHJ-${year}${month}${day}${hours}${minutes};
+                const generatedId = `BHJ-${year}${month}${day}${hours}${minutes}`;
                 
                 // Update ID card details
                 idName.textContent = name;
