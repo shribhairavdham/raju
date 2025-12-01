@@ -3,181 +3,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lok Sahayak</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lok Sahayak - Timer Lock</title>
 
 <style>
     body {
         margin: 0;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         background: linear-gradient(135deg, #0f172a, #1e293b);
         color: white;
-        overflow-x: hidden;
+        text-align: center;
     }
 
-    /* Mica Style Glass */
+    /* TIMER SCREEN */
+    #timer-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #timer-box {
+        background: rgba(255,255,255,0.1);
+        padding: 40px 60px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+    }
+
+    #countdown {
+        font-size: 45px;
+        font-weight: 700;
+        margin-top: 10px;
+        letter-spacing: 2px;
+    }
+
+    /* MAIN PAGE (hidden initially) */
+    #main-page {
+        display: none;
+        padding: 40px 20px;
+    }
+
     .glass {
         background: rgba(255, 255, 255, 0.08);
         border-radius: 20px;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.15);
         padding: 25px;
-    }
-
-    header {
-        width: 100%;
-        padding: 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h2 {
-        margin: 0;
-        font-size: 26px;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-
-    nav a {
-        margin: 0 15px;
-        font-size: 15px;
-        text-decoration: none;
-        color: #dbeafe;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #60a5fa;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 120px 20px 80px;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        background: linear-gradient(to right, #60a5fa, #a78bfa);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-        font-size: 17px;
-        opacity: 0.8;
-        margin-bottom: 25px;
-    }
-
-    .hero button {
-        padding: 14px 35px;
-        font-size: 15px;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        color: #fff;
-        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-        transition: 0.3s;
-        font-weight: 600;
-    }
-
-    .hero button:hover {
-        transform: scale(1.05);
-    }
-
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-        padding: 60px 20px;
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    .card {
-        padding: 30px;
-        transition: 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-8px);
-    }
-
-    .lock-box {
-        max-width: 450px;
-        margin: 40px auto;
-        text-align: center;
-        padding: 25px;
-        border-left: 4px solid #f87171;
-    }
-
-    .lock-box h3 {
-        color: #fca5a5;
-        font-weight: 600;
-    }
-
-    footer {
-        padding: 20px;
-        text-align: center;
-        opacity: 0.6;
-        font-size: 14px;
+        margin-bottom: 20px;
     }
 </style>
 </head>
-
 <body>
 
-<header>
-    <h2>Lok Sahayak</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+<!-- TIMER PAGE -->
+<div id="timer-screen">
+    <div id="timer-box">
+        <h2>⏳ Website Unlocks In</h2>
+        <div id="countdown">Loading...</div>
+    </div>
+</div>
 
-<section class="hero">
+<!-- MAIN PAGE (unlocked after timer ends) -->
+<div id="main-page">
     <h1>Welcome to Lok Sahayak</h1>
-    <p>Your trusted platform for public help, support & digital services.</p>
-    <button>Explore Now</button>
-</section>
+    <p>Your trusted platform for public help & services.</p>
 
-<section class="lock-box glass">
-    <h3>⚠️ Website Temporarily Locked</h3>
-    <p>
-        This website is currently under maintenance and updates.<br>
-        Please check back later. Thank you for your patience.
-    </p>
-</section>
-
-<section class="cards">
-    <div class="card glass">
-        <h3>✔ Public Services</h3>
-        <p>Fast and reliable access to essential services for everyone.</p>
+    <div class="glass">
+        <h3>Public Services</h3>
+        <p>Fast and reliable access to essential services.</p>
     </div>
 
-    <div class="card glass">
-        <h3>✔ Secure System</h3>
+    <div class="glass">
+        <h3>Secure System</h3>
         <p>Your data is protected with high-level security.</p>
     </div>
 
-    <div class="card glass">
-        <h3>✔ Easy to Use</h3>
+    <div class="glass">
+        <h3>Easy to Use</h3>
         <p>User-friendly interface designed for every citizen.</p>
     </div>
-</section>
+</div>
 
-<footer>
-    © 2025 Lok Sahayak. All Rights Reserved.
-</footer>
+<script>
+    // 50 hours in milliseconds
+    let countdownTime = 50 * 60 * 60 * 1000;
+
+    // Save start time so the timer continues even if user refreshes
+    if (!localStorage.getItem("timerStart")) {
+        localStorage.setItem("timerStart", Date.now());
+    }
+
+    function updateTimer() {
+        let startTime = parseInt(localStorage.getItem("timerStart"));
+        let now = Date.now();
+        let distance = countdownTime - (now - startTime);
+
+        if (distance <= 0) {
+            // Hide timer page
+            document.getElementById("timer-screen").style.display = "none";
+
+            // Show main homepage
+            document.getElementById("main-page").style.display = "block";
+            return;
+        }
+
+        // Calculate time
+        let hours = Math.floor((distance / (1000 * 60 * 60)));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display timer
+        document.getElementById("countdown").innerHTML =
+            hours + "h : " + minutes + "m : " + seconds + "s";
+    }
+
+    // Update every second
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
 
 </body>
 </html>
-
     
 
 
