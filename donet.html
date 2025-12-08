@@ -295,6 +295,43 @@
             </ul>
         </div>
     </div>
+
+
+
+    <style>
+    #sanskrit-box {
+        width: 100%;
+        background: #f2f8ff;
+        padding: 10px 0;
+        overflow: hidden;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .moving-text {
+        font-size: 20px;
+        font-weight: bold;
+        white-space: nowrap;
+        display: inline-block;
+        padding-left: 100%;
+        animation: slideText 12s linear infinite;
+        color: #333;
+    }
+
+    @keyframes slideText {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
+
+<div id="sanskrit-box">
+    <span class="moving-text">
+        उद्यमेन हि सिद्ध्यन्ति कार्याणि, न मनोरथैः।
+    </span>
+</div>
+
+
+
     
     <!-- Footer -->
     <footer class="animate__animated animate__fadeInUp">
@@ -334,3 +371,4 @@
     </script>
 </body>
 </html>
+
