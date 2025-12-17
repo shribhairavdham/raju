@@ -1,401 +1,1224 @@
 
 
 <!DOCTYPE html>
-</html>
-</head>
-    <title>Shri Bhairav Dham Sarkar</title>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="श्री भैरव धाम सरकार - मध्य प्रदेश के छतरपुर जिले में स्थित हनुमान जी का दिव्य स्थान। स्वयंभू हनुमान जी की कृपा एवं गुरुदेव के मार्गदर्शन में आध्यात्मिक सेवाएं।">
+    <meta name="keywords" content="श्री भैरव धाम सरकार, हनुमान मंदिर, छतरपुर, अर्जी, दरबार, कथा, गुरुदेव, spiritual services">
+    <title>श्री भैरव धाम सरकार </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
-
-.signin-toggle {
-  background-color: white;
-  color: #0072ff;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 2px solid #0072ff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 10px;
-}
-
-.signin-toggle:hover {
-  background-color: #0072ff;
-  color: white;
-}
-
-.login-container {
-  background-color: white;
-  padding: 30px 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 300px;
-  animation: fadeIn 0.4s ease;
-  margin-top: 20px;
-}
-
-.login-container input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 8px;
-  background: #f1f1f1;
-  font-size: 16px;
-}
-
-.login-container button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0072ff;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
-
-.login-container button:hover {
-  background-color: #005ec2;
-}
-
-#status, #signupStatus {
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-        
-
-
-
-
-
-        
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+        /* Basic Reset and Variables */
+        * {
             margin: 0;
             padding: 0;
-            animation: fadeIn 1s ease-in-out;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        :root {
+            --primary-color: #ff6b00;
+            --secondary-color: #8b0000;
+            --accent-color: #ffd700;
+            --light-color: #fff8e1;
+            --dark-color: #333;
+            --text-color: #444;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+		    margin-left:85px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hindi {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+        
+        .language-toggle {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .main-header {
+            padding: 15px 0;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         
         .logo {
-            width: 15%;
-            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
         }
         
-        .logo:hover {
-            transform: scale(1.05);
+        .logo-text {
+            margin-left: 15px;
         }
         
-        h1 {
-            font-size: 1.8em;
-            text-align: center;
-            color: #8B0000;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        .logo h1 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
         }
         
-        p {
-            font-size: 1.0em;
-            text-align: center;
-            margin: 20px auto;
-            max-width: 800px;
-            line-height: 1.6;
+        .logo p {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-top: 5px;
         }
         
-        .btn {
-            display: inline-block;
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 25px;
+        }
+        
+        nav a {
             text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #FF0000, #8B0000);
-            font-size: 20px;
-            padding: 12px 35px;
-            border-radius: 50px;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            padding: 5px 0;
             position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .donate-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .donate-btn:hover {
+            background-color: #e55a00;
+            color: white;
+        }
+        
+        .donate-btn::after {
+            display: none;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Banner */
+        .hero {
+            position: relative;
+            height: 500px;
             overflow: hidden;
+            margin-bottom: 40px;
         }
         
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+        .hero-slider {
+            height: 100%;
+            position: relative;
         }
         
-        .btn:active {
-            transform: translateY(1px);
-        }
-        
-        .btn::after {
-            content: "";
+        .slide {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #8B0000, #FF0000);
-            z-index: -1;
-            transition: opacity 0.3s ease;
+            background-size: cover;
+            background-position: center;
             opacity: 0;
+            transition: opacity 1s ease;
         }
         
-        .btn:hover::after {
+        .slide.active {
             opacity: 1;
         }
         
-        hr {
-            width: 60%;
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(139, 0, 0, 0), rgba(139, 0, 0, 0.75), rgba(139, 0, 0, 0));
-            margin: 40px auto;
+        .slide-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
         }
         
-        .links {
+        .slide-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+        }
+        
+        .slide-3 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            margin-bottom: 80px;
-            font-size: 1.6em;
+            color: white;
+            width: 80%;
+            max-width: 800px;
+            z-index: 2;
         }
         
-        .links a {
-            padding: 0 30px;
-            text-decoration: none;
-            color: #8aadda;
-            transition: all 0.3s ease;
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        
+        .slider-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 10;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .slider-dot.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+        
+        /* Introduction Section */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
             position: relative;
+            padding-bottom: 15px;
         }
         
-        .links a:hover {
-            color: #8B0000;
-            transform: translateY(-2px);
-        }
-        
-        .links a::after {
+        .section-title::after {
             content: '';
             position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #8B0000;
-            transition: width 0.3s ease;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        .links a:hover::after {
-            width: 100%;
+        .intro-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
         
-        img {
-            transition: transform 0.3s ease;
+        .intro-text {
+            flex: 1;
+            min-width: 300px;
         }
         
-        img:hover {
-            transform: scale(1.02);
+        .intro-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
-        video {
-            width: 40%;
-            margin: 50px auto 20px;
-            display: block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border-radius: 5px;
-            transition: transform 0.3s ease;
+        .contact-highlight {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 20px;
         }
         
-        video:hover {
-            transform: scale(1.01);
-        }
-        
-        ul {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        
-        li {
+        .contact-highlight h3 {
+            color: var(--secondary-color);
             margin-bottom: 10px;
-            list-style-type: none;
-            position: relative;
-            padding-left: 30px;
         }
         
-        li::before {
-            content: "•";
-            color: #8B0000;
-            font-size: 1.5em;
-            position: absolute;
-            left: 0;
-            top: -5px;
+        .contact-numbers {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: bold;
         }
         
-        h6 {
+        .intro-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Cards Section */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .card p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .card-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .card-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        /* Events Section */
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .events-table th {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .events-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .events-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .events-table tr:hover {
+            background-color: #fff8e1;
+        }
+        
+        .event-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .event-live {
+            display: inline-block;
+            background-color: #ff0000;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        
+        .see-more {
             text-align: center;
-            color: #8B0000;
-            margin: 30px 0;
-            font-size: 1.1em;
+            margin-top: 30px;
         }
+        
+        .see-more-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        
+        .see-more-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Gallery Section */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Instructions Section */
+        .instructions {
+            background-color: var(--light-color);
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .instructions h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .instructions ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(rgba(139,0,0,0.9), rgba(139,0,0,0.8)), url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 8px;
+            margin: 60px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 15px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        
+        .cta-btn:hover {
+            background-color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent-color);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ccc;
+            margin-bottom: 15px;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            padding-left: 0;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav li {
+                margin: 0 0 15px 0;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                height: 350px;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .instructions {
+                padding: 25px;
+            }
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slider {
+    position: relative;
+    height: 100%;
+}
+
+/* Common slide style */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active slide */
+.slide.active {
+    opacity: 1;
+}
+
+/* 🔁 CHANGE THESE IMAGES ONLY */
+.slide-1 {
+    background-image: url("rs.jpg");
+}
+
+.slide-2 {
+    background-image: url("rs2.jpg");
+}
+
+.slide-3 {
+    background-image: url("rs.jpg");
+}
     </style>
 </head>
-<meta name="google-site-verification" content="1VSQNm9SuxlXVgVksRVVOk1qXeUF0x7e_9K7Ab5PVNU" />
-
-    <!-- Sign Up and Sign In buttons -->
-<button class="signin-toggle" onclick="showSignUp()">Sign Up</button>
-<button class="signin-toggle" onclick="showSignIn()">Sign In</button>
-
-<!-- Sign Up Form -->
-<div class="login-container" id="signupForm" style="display: none;">
-  <h2>Create Account</h2>
-  <input type="text" id="newUsername" placeholder="Choose a Username">
-  <input type="password" id="newPassword" placeholder="Choose a Password">
-  <button onclick="signUp()">Register</button>
-  <p id="signupStatus"></p>
-</div>
-
-<!-- Sign In Form -->
-<div class="login-container" id="signinForm" style="display: none;">
-  <h2>Welcome Back</h2>
-  <input type="text" id="username" placeholder="Username">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">Sign In</button>
-  <p id="status"></p>
-  <button id="logoutBtn" onclick="logout()" style="display: none;">Sign Out</button>
-</div>
-
-
-
-
-    
 <body>
-    <div style="text-align:center;margin-top:50px;"> 
-        <img class="logo" src="logooo.png" alt="Shri Bhairav Dham Logo">
+    <!-- Announcement Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <button class="language-toggle" id="languageToggle">हिन्दी / English</button>
+        </div>
     </div>
     
-    <div style="text-align:center;">
-        <img src="titlee.jpg" alt="Title Image">
-    </div>
+    <!-- Main Header -->
+    <header>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-container">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <!-- Placeholder for logo image -->
+							<img style="border-radius:50%; width:10%;" src="logooo.png">
+                            
+                                
+                            </div>
+                        </div>
+                        <div class="logo-text">
+                            <h1 class="hindi">श्री भैरव धाम सरकार</h1>
+                            <p>SHRI BHAIRAV DHAM SARKAR</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                
+                <nav>
+                    <ul id="mainMenu">
+                        <li><a href="index.html" class="hindi">होम</a></li>
+                        <li><a href="ntrxpallo.html" class="hindi">आईडी कार्ड निर्माण </a></li>
+                        <li><a href="at.html" class="hindi">वीडियो </a></li>
+                        <li><a href="obout.html">अबाउट</a></li>
+                        <li><a href="contect.html" class="hindi">संपर्क</a></li>
+                        <li><a href="donet.html" class="donate-btn hindi">दान करें</a></li>
+						<li><a href="full.html" class="hindi"> अन्य सामग्री</a></li>
+					
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     
-    <h1>"SHRI BHAIRAV DHAM SARKAR"</h1>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div  class="slide slide-1"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+            
+            <div class="hero-content">
+                <h2 class="hindi">श्री भैरव धाम सरकार</h2>
+                <p class="hindi">स्वयंभू हनुमान जी की दिव्यता के लिए प्रसिद्ध</p>
+            </div>
+            
+            <div class="slider-controls">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
     
-    <p>
-        कलयुग की दुनिया में श्री बटुकभैरव जी महाराज का<br>
-        एकमात्र दिव्यदर्शी दरबार जहाँ आज भी चैलेंज के साथ आपका भूत, भविष्य , वर्तमान बताया जाता हैं<br> या फिर मनुष्य जीवन से जुड़ी कोई भी समस्या हो उसका उत्तर व समाधान आपके पूछने से पहले लिख दिया जाता हैं <br>यह दरबार हर महीने की अमावस्या तिथि को श्री भैरव धाम सिद्धपीठ आश्रम (लोहागढ़) में लगता है आप सभी आमंत्रित है।<br>पता- श्री भैरव धाम सिद्धपीठ आश्रम तहसील मोठ <br> जिला झांसी उत्तरप्रदेश। नज़दीक रेलवे स्टेशन झाँसी जंक्शन उत्तर प्रदेश से 82 k.m. की दूरी पर है!
-    </p>
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title hindi">स्वागत है आपका भैरव धाम में</h2>
+            
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p class="hindi">भैरव धाम, जो सिद्धपीठ आश्रम तहसील मोठ जिला झांसी उत्तरप्रदेश। नज़दीक रेलवे स्टेशन झाँसी जंक्शन उत्तर प्रदेश से 82 k.m. की दूरी पर है!</p>
+                    <p class="hindi">यहां पर श्रद्धालु अपनी "अर्जी" (प्रार्थना पत्र) प्रस्तुत कर सकते हैं। गुरुदेव  की कृपा से भक्तों को उनकी समस्याओं का समाधान प्राप्त होता है।</p>
+                    
+                    <div class="contact-highlight">
+                        <h3 class="hindi">संपर्क करें</h3>
+                        <div class="contact-numbers">+91 81030 78624 / +91-91 90743 47634</div>
+                        <p class="hindi">अर्जी प्रक्रिया एवं अन्य जानकारी के लिए संपर्क करें</p>
+                    </div>
+                </div>
+                
+                <div class="intro-image">
+                    <!-- Placeholder for temple image -->
+					
+                    <div  style="width: 100%; height: 400px; background-color: #ddd; display: flex; align-items: center; justify-content: center; color: #777;">
+                      भैरव धाम छवि
+						<img src="logooo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <div style="text-align:center;">
-        <a class="btn" href="obout.html">ABOUT</a>
-    </div>
+    <!-- Key Sections -->
+    <section class="section" style="background-color: #f5f5f5;">
+        <div class="container">
+            <h2 class="section-title hindi">मुख्य सेवाएं एवं जानकारी</h2>
+            
+            <div class="cards-container">
+                <!-- Gurudev Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <!-- Placeholder for image -->
+                        <div style="width: 100%; height: 200px; background-color: #8b0000; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                            गुरुदेव
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="hindi">गुरुदेव परिचय</h3>
+                        <p class="hindi">बागेश्वर धाम के पीठाधीश्वर एवं आध्यात्मिक मार्गदर्शक के बारे में जानकारी। गुरुदेव की कृपा से भक्तों को मार्गदर्शन प्राप्त होता है।</p>
+                        <a href="#" class="card-btn hindi">अधिक जानें</a>
+                    </div>
+                </div>
+                
+                <!-- Services Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <!-- Placeholder for image -->
+                        <div style="width: 100%; height: 200px; background-color: #ff6b00; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                            सेवाएं
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="hindi">सेवाएं</h3>
+                        <p class="hindi">पूजा, अर्जी दरबार, आध्यात्मिक उपचार एवं अन्य सेवाओं की जानकारी। भक्त अपनी आवश्यकतानुसार सेवाएं प्राप्त कर सकते हैं।</p>
+                        <a href="#" class="card-btn hindi">सभी सेवाएं</a>
+                    </div>
+                </div>
+                
+                <!-- Events Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <!-- Placeholder for image -->
+                        <div style="width: 100%; height: 200px; background-color: #ffd700; display: flex; align-items: center; justify-content: center; color: #333; font-size: 1.5rem;">
+                            कथा कार्यक्रम
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="hindi">कथा एवं कार्यक्रम</h3>
+                        <p class="hindi">आगामी कथा, दरबार, आत्मिक चिकित्सा एवं टोकन वितरण कार्यक्रमों की जानकारी। मंगलवार दरबार विशेष।</p>
+                        <a href="#" class="card-btn hindi">कार्यक्रम देखें</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <hr>
+    <!-- Upcoming Events -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title hindi">आगामी कार्यक्रम</h2>
+            
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th class="hindi">तारीख</th>
+                        <th class="hindi">कार्यक्रम</th>
+                        <th class="hindi">स्थान</th>
+                        <th class="hindi">समय</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="event-date">15 जून 2023</td>
+                        <td class="hindi">हनुमान चालीसा कथा <span class="event-live">LIVE</span></td>
+                        <td class="hindi">बागेश्वर धाम, छतरपुर</td>
+                        <td class="hindi">शाम 6:00 बजे</td>
+                    </tr>
+                    <tr>
+                        <td class="event-date">20 जून 2023</td>
+                        <td class="hindi">मंगलवार विशेष दरबार</td>
+                        <td class="hindi">बागेश्वर धाम, छतरपुर</td>
+                        <td class="hindi">सुबह 10:00 बजे</td>
+                    </tr>
+                    <tr>
+                        <td class="event-date">25 जून 2023</td>
+                        <td class="hindi">सुंदरकांड पाठ</td>
+                        <td class="hindi">दिल्ली</td>
+                        <td class="hindi">सुबह 9:00 बजे</td>
+                    </tr>
+                    <tr>
+                        <td class="event-date">30 जून 2023</td>
+                        <td class="hindi">आत्मिक चिकित्सा कार्यक्रम</td>
+                        <td class="hindi">मुंबई</td>
+                        <td class="hindi">दोपहर 3:00 बजे</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="see-more">
+                <a href="#" class="see-more-btn hindi">सभी कार्यक्रम देखें</a>
+            </div>
+        </div>
+    </section>
     
-    <div class="links">
-        <a href="index.html">HOME</a>
-        <a href="contect.html">CONTACT</a>
-        <a href="donet.html">DONATE</a>
-         <a href="at.html">VIDEO</a>
-        <a href="full.html">CONTENT</a>
-         <a href="ntrxpallo.html">ID CARD GENERATE</a>
-    </div>
+    <!-- Gallery Section -->
+    <section class="section" style="background-color: #f5f5f5;">
+        <div class="container">
+            <h2 class="section-title hindi">गैलरी</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <!-- Placeholder for image -->
+                    <div style="width: 100%; height: 100%; background-color: #ccc; display: flex; align-items: center; justify-content: center; color: #555;">
+                        मंदिर छवि
+                    </div>
+                    <div class="gallery-overlay hindi">मंदिर दृश्य</div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background-color: #aaa; display: flex; align-items: center; justify-content: center; color: #555;">
+                        भक्त समागम
+                    </div>
+                    <div class="gallery-overlay hindi">भक्त समागम</div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background-color: #888; display: flex; align-items: center; justify-content: center; color: white;">
+                        कथा कार्यक्रम
+                    </div>
+                    <div class="gallery-overlay hindi">कथा कार्यक्रम</div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background-color: #666; display: flex; align-items: center; justify-content: center; color: white;">
+                        पदयात्रा
+                    </div>
+                    <div class="gallery-overlay hindi">पदयात्रा</div>
+                </div>
+            </div>
+            
+            <div class="see-more">
+                <a href="#" class="see-more-btn hindi">सभी फोटो देखें</a>
+                <a href="#" class="see-more-btn" style="margin-left: 15px;">पदयात्रा वीडियो</a>
+            </div>
+        </div>
+    </section>
     
-    <div style="text-align:center;">
-        <img style="width: 21%;" src="anshesh3.jpg" alt="Image 1">
-        <img style="width: 28%;" src="anshesh1.jpg" alt="Image 2">
-        <img style="width: 42%;" src="anshesh2.jpg" alt="Image 3">
-    </div>
+    <!-- How to Submit Arzi & Instructions -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title hindi">अर्जी प्रक्रिया एवं महत्वपूर्ण निर्देश</h2>
+            
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h3 class="hindi">हमारे बारे में:-</h3>
+                    <p class="hindi">श्री श्री 108 श्री राजूदास महाराज को श्री भैरव धाम सरकार के रूप में भी जाना जाता है, जो सर्वशक्तिमान भगवान बटुकभैरव की कृपा से उन्हें दी गई दिव्य शक्तियों के साथ मानवता की सेवा के लिए वे हमेशा समर्पित हैं,</p>
+                    
+                    <div class="instructions">
+                        <h3 class="hindi">महायज्ञ के नियम:-</h3>
+                        <ul class="hindi">
+                            <li>( १ ) यज्ञ में बैठने के लिये यजमान को एक सप्ताह पूर्व से ही ब्रह्मचर्य से रहना आरम्भ कर देना चाहिए!</li>
+                            <li>( २ ) यज्ञ के दिनों उपवास पूर्वक फल , दूध , अथवा हविष्यान्न लेकर रहें ।</li>
+                            <li>( ३ ) यज्ञ के दिनों , अपना अधिकांश समय साधना , उपासना , स्वाध्याय , भगवत भजन में ही लगाया जायं</li>
+                            <li>( ४ ) यज्ञ में बैठने के लिए स्नान करके धुले हुए वस्त्र । पीला गमछा एवं लाल वस्त्र पहनने होगें ।</li>
+                        </ul>
+                        <p class="hindi">अधिक जानकारी के लिए संपर्क करें: +91 81030 78624 / +91 90743 47634</p>
+                    </div>
+                </div>
+                
+                <div class="intro-image">
+                    <!-- Placeholder for arzi process image -->
+                    <div style="width: 100%; height: 400px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #777; flex-direction: column; padding: 20px;">
+                        <div style="font-size: 3rem; margin-bottom: 20px;">📜</div>
+                        <div class="hindi" style="text-align: center;">अर्जी प्रक्रिया<br>(नारियल बांधने की विधि)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <h1 style="text-align:center;color:#8B0000;">*ONE SHOTE*</h1>
+    <!-- Call to Action / Donate -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="hindi">श्री भैरव धाम सरकार के मिशन में सहयोग करें</h2>
+            <p class="hindi">आध्यात्मिक कार्य, मानवता की सेवा, मंदिर विकास एवं धार्मिक गतिविधियों के लिए अपना योगदान दें। आपका दान धार्मिक एवं सामाजिक कार्यों में उपयोग किया जाएगा।</p>
+            <a href="donet.html" class="cta-btn hindi">दान करें</a>
+        </div>
+    </section>
     
-    <div style="text-align:center;">
-        <video src="v3/video.mp4" controls></video>
-        <video src="v3/video2.mp4" controls></video>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="hindi">श्री भैरव धाम सरकार</h3>
+                    <p class="hindi">पता- श्री भैरव धाम सिद्धपीठ आश्रम तहसील मोठ जिला झांसी उत्तरप्रदेश। नज़दीक रेलवे स्टेशन झाँसी जंक्शन उत्तर प्रदेश से 82 k.m. की दूरी पर है!</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 81030 78624</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 90743 47634</p>
+                    
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/17PM97HFWi/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@rajupandit83" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/bhairavbhakt173?igsh=cWU5aGI1OGNlMjBj" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="hindi">मुख्य लिंक</h3>
+                    <a href="#" class="hindi">होम</a>
+                    <a href="#" class="hindi">गुरुदेव परिचय</a>
+                    <a href="#" class="hindi">सेवाएं</a>
+                    <a href="#" class="hindi">कथा कार्यक्रम</a>
+                    <a href="#" class="hindi">गैलरी</a>
+                    <a href="#" class="hindi">संपर्क</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="hindi">महत्वपूर्ण जानकारी</h3>
+                    <a href="#" class="hindi">अर्जी प्रक्रिया</a>
+                    <a href="#" class="hindi">दान प्रक्रिया</a>
+                    <a href="#" class="hindi">नियम एवं शर्तें</a>
+                    <a href="#" class="hindi">गोपनीयता नीति</a>
+                    <a href="#" class="hindi">सहायता</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p>SHRI BHAIRAV DHAM SARKAR</p>
+                    <p>सिद्धपीठ आश्रम तहसील मोठ जिला झांसी उत्तरप्रदेश।<br> नज़दीक रेलवे स्टेशन झाँसी जंक्शन उत्तर प्रदेश से 82 k.m.</p>
+                   
+                    <p>+91 81030 78624 <br>+91 90743 47634</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="hindi">© 2025 श्री भैरव धाम सरकार। सर्वाधिकार सुरक्षित।</p>
+                <p>Website designed BY Anshesh Rajawat.</p>
+            </div>
+        </div>
+    </footer>
     
-    <p>
-        If you want to CONTACT HIM, <br>
-        So there are some few steps to contact him::---<br>
-    </p>
-    
-    <ul>
-        <li>"CLICK TO THE CONTACT LINK, BOTTOM ON THE WEBPAGE"</li>
-        <li>"CHOOSE YOUR FAVORITE Activity"</li>
-        <li>"CONTACT FROM THE BELOW NUMBER"</li>
-        <li>"AND THEN ENJOY"</li>
-    </ul>
-    
-    <hr>
-    
-    <h6>------------:"Thanks For Visiting Shri Bhairav Dham Sarkar":------------</h6>
-
     <script>
-function showSignUp() {
-  document.getElementById("signupForm").style.display = "block";
-  document.getElementById("signinForm").style.display = "none";
-}
-
-function showSignIn() {
-  document.getElementById("signupForm").style.display = "none";
-  document.getElementById("signinForm").style.display = "block";
-}
-
-function signUp() {
-  const username = document.getElementById("newUsername").value;
-  const password = document.getElementById("newPassword").value;
-
-  if (username && password) {
-    // Save to localStorage (just for demo)
-    localStorage.setItem("savedUsername", username);
-    localStorage.setItem("savedPassword", password);
-    document.getElementById("signupStatus").innerText = "Sign Up Successful! Now sign in.";
-    document.getElementById("signupStatus").style.color = "green";
-  } else {
-    document.getElementById("signupStatus").innerText = "Please fill all fields!";
-    document.getElementById("signupStatus").style.color = "red";
-  }
-}
-
-function login() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  const savedUsername = localStorage.getItem("savedUsername");
-  const savedPassword = localStorage.getItem("savedPassword");
-
-  if (username === savedUsername && password === savedPassword) {
-    document.getElementById("status").innerText = "Login successful!";
-    document.getElementById("status").style.color = "green";
-    document.getElementById("logoutBtn").style.display = "block";
-  } else {
-    document.getElementById("status").innerText = "Invalid credentials!";
-    document.getElementById("status").style.color = "red";
-  }
-}
-
-function logout() {
-  document.getElementById("status").innerText = "Signed out successfully!";
-  document.getElementById("status").style.color = "green";
-  document.getElementById("logoutBtn").style.display = "none";
-}
-</script>
-    	
-    
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Image Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show current slide
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        // Add click events to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Language Toggle
+        const languageToggle = document.getElementById('languageToggle');
+        let isHindi = true;
+        
+        languageToggle.addEventListener('click', function() {
+            isHindi = !isHindi;
+            if (isHindi) {
+                languageToggle.textContent = 'हिन्दी / English';
+                // In a real implementation, we would toggle all text content
+            } else {
+                languageToggle.textContent = 'Hindi / English';
+                // In a real implementation, we would toggle all text content
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mainMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
     
+
 
 
