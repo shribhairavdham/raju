@@ -797,6 +797,132 @@
 .slide-3 {
     background-image: url("rss.jpg");
 }
+
+
+
+
+
+
+
+
+
+
+
+		/* ============================
+   MOBILE RESPONSIVE FIX
+   Desktop stays unchanged
+   ============================ */
+
+@media (max-width: 768px) {
+
+    /* Body spacing */
+    body {
+        overflow-x: hidden;
+		margin-left:0px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 1.4em !important;
+        padding: 0 12px;
+        text-align: center !important;
+        margin-left: 0 !important;
+    }
+
+    h3 {
+        font-size: 1.1em !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    h6 {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+
+    /* Paragraphs */
+    p {
+        font-size: 1em !important;
+        padding: 0 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center !important;
+        line-height: 1.6;
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+    }
+
+    /* Logo special fix */
+    .logooo {
+        width: 120px !important;
+    }
+
+    /* Videos */
+    video {
+        width: 95% !important;
+        margin: 20px auto !important;
+        display: block;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 85% !important;
+        font-size: 18px !important;
+        padding: 14px !important;
+        margin: 20px auto !important;
+        display: block;
+        text-align: center;
+    }
+
+    /* Navigation links */
+    .links {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+    }
+
+    .links a {
+        display: block !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Lists */
+    ul {
+        padding: 0 20px !important;
+    }
+
+    li {
+        padding-left: 25px;
+        font-size: 1em;
+    }
+
+    /* Horizontal line */
+    hr {
+        width: 90% !important;
+    }
+
+    /* Social icons + links alignment */
+    a {
+        word-break: break-word;
+    }
+
+    /* Remove fixed left margins (VERY IMPORTANT) */
+    [style*="margin-left"] {
+        margin-left: 0 !important;
+    }
+
+    /* Center everything safely */
+    div {
+        max-width: 100%;
+    }
+}
     </style>
 </head>
 <body>
@@ -821,7 +947,7 @@
                     <div class="logo">
                         <div class="logo-icon">
                             <!-- Placeholder for logo image -->
-							<img style="border-radius:50%; width:10%;" src="logooo.png">
+							<img class="logooo"style="border-radius:50%; width:10%;" src="logooo.png">
                             
                                 
                             </div>
@@ -1219,6 +1345,7 @@
 </body>
 </html>
     
+
 
 
 
