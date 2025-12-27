@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>श्री भैरव धाम सरकार</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Serif Devanagari', serif;
+    background:#ffffff;
+    color:#222;
+    line-height:1.7;
+}
+
+/* ================= HEADER ================= */
+header{
+    position: sticky;
+    top:0;
+    background:#fff;
+    z-index:100;
+    border-bottom:1px solid #eee;
+}
+
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 16px;
+}
+
+.logo img{
+    height:38px;
+}
+
+.menu-lang{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.lang{
+    background:#ff7a00;
+    color:#fff;
+    padding:5px 10px;
+    font-size:14px;
+    border-radius:4px;
+}
+
+/* ================= HERO ================= */
+.hero{
+    position:relative;
+    width:100%;
+    height:420px;
+    background:url("hero.jpg") center/cover no-repeat;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.3));
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    padding:20px;
+    max-width:90%;
+}
+
+.hero h1{
+    font-size:30px;
+    color:#7a0000;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#333;
+}
+
+/* ================= SECTION ================= */
+.section{
+    padding:30px 16px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:24px;
+    color:#7a0000;
+    margin-bottom:15px;
+}
+
+.section p{
+    font-size:16px;
+    text-align:center;
+}
+
+/* ================= IMAGE CARD ================= */
+.image-card{
+    position:relative;
+    margin:20px 0;
+}
+
+.image-card img{
+    width:100%;
+    display:block;
+}
+
+.image-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.2));
+}
+
+.image-card h3{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:26px;
+    color:#222;
+    z-index:2;
+}
+
+/* ================= TEXT BLOCK ================= */
+.text-block{
+    padding:20px 16px;
+    font-size:15.5px;
+    color:#333;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#f4f4f4;
+    padding:20px;
+    text-align:center;
+    font-size:14px;
+    color:#555;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width:768px){
+    .hero{
+        height:520px;
+    }
+    .hero h1{
+        font-size:42px;
+    }
+    .hero p{
+        font-size:20px;
+    }
+    .section p{
+        max-width:800px;
+        margin:auto;
+    }
+    .text-block{
+        max-width:900px;
+        margin:auto;
+    }
+}
+
+.img95 {
+
+        width:40%;
+		margin-left:400px;
+}
+
+.img2  {
+
+        width:30%;
+		
+
+}
+
+
+
+
+
+/* ============================
+   MOBILE RESPONSIVE FIX
+   Desktop stays unchanged
+   ============================ */
+
+@media (max-width: 768px) {
+
+    /* Body spacing */
+    body {
+        overflow-x: hidden;
+		margin-left:0px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 1.4em !important;
+        padding: 0 12px;
+        text-align: center !important;
+        margin-left: 0 !important;
+    }
+
+    h3 {
+        font-size: 1.1em !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    h6 {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+
+    /* Paragraphs */
+    p {
+        font-size: 1em !important;
+        padding: 0 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center !important;
+        line-height: 1.6;
+    }
+
+    /* Images */
+    .img95 {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+    }
+
+    /* Logo special fix */
+    .logooo {
+        width: 120px !important;
+    }
+
+    /* Videos */
+    video {
+        width: 95% !important;
+        margin: 20px auto !important;
+        display: block;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 85% !important;
+        font-size: 18px !important;
+        padding: 14px !important;
+        margin: 20px auto !important;
+        display: block;
+        text-align: center;
+    }
+
+    /* Navigation links */
+    .links {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+    }
+
+    .links a {
+        display: block !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Lists */
+    ul {
+        padding: 0 20px !important;
+    }
+
+    li {
+        padding-left: 25px;
+        font-size: 1em;
+    }
+
+    /* Horizontal line */
+    hr {
+        width: 90% !important;
+    }
+
+    /* Social icons + links alignment */
+    a {
+        word-break: break-word;
+    }
+
+    /* Remove fixed left margins (VERY IMPORTANT) */
+    [style*="margin-left"] {
+        margin-left: 0 !important;
+    }
+
+    /* Center everything safely */
+    div {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-inner">
+        <div  class="logoo">
+            <img style=" height:38px;" src="logooo.png" alt="Logoo">
+        </div>
+        <div class="menu-lang">
+            <div class="lang">HIN</div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+	<img src="p1.jpg" class="img95">
+
+	
+        <h1>गुरुदेवः पथ रोशन कर रहे हैं<br>जीवन बदल रहे हैं</h1>
+    </div>
+</section>
+
+<!-- MISSION -->
+<section class="section">
+    <h2>श्री भैरव धाम जनसेवा समिति के संकल्प</h2>
+    <p>
+        पूज्य गुरुदेव की कृपा और प्रेरणा से समाज के उत्थान एवं परोपकार के कार्यों का निरंतर अभियान।
+    </p>
+</section>
+ 
+<!-- IMAGE SECTION -->
+ <div style="text-align:center;">
+    <img src="p6.jpg" class="img2">
+    <h3>माँ अन्नपूर्णा रसोई</h3>
+</div>
+
+<div class="text-block">
+    <p>
+        माँ अन्नपूर्णा रसोई के माध्यम से प्रतिदिन सैकड़ों श्रद्धालुओं एवं जरूरतमंदों को भोजन प्रसाद वितरित किया जाता है।
+    </p>
+</div>
+
+<!-- IMAGE SECTION -->
+ <div style="text-align:center;">
+    <img src="p13.jpg" class="img2">
+    <h3>कन्या विवाह</h3>
+</div>
+
+<div class="text-block">
+    <p>
+        निर्धन कन्याओं के विवाह हेतु वस्त्र, भोजन एवं आवश्यक सामग्री उपलब्ध कराकर सामाजिक उत्तरदायित्व निभाया जाता है।
+    </p>
+</div>
+
+<!-- IMAGE SECTION -->
+ <div style="text-align:center;">
+    <img src="p11.jpg" class="img2">
+    <h3>गौ सेवा</h3>
+</div>
+
+<div class="text-block">
+    <p>
+        गौ माता की सेवा एवं संरक्षण के लिए गौशालाओं का संचालन एवं चिकित्सा सहायता प्रदान की जाती है।
+    </p>
+</div>
+<h2 style="text-align:center;">--::Others::--</h2>
+ <div style="text-align:center;">
+    <img src="p12.jpg" class="img2">
+	</div>
+	
+	
+	 <div style="text-align:center;">
+    <img src="p3.jpg" class="img2">
+	</div>
+	
+	
+	 <div style="text-align:center;">
+    <img src="p14.jpg" class="img2">
+	</div>
+	
+	
+	 <div style="text-align:center;">
+    <img src="p8.jpg" class="img2">
+	</div>
+	
+	
+	 <div style="text-align:center;">
+    <img src="p7.jpg" class="img2">
+	</div>
+	
+	
+<!-- FOOTER -->
+<footer>
+     • जय श्री भैरव धाम सरकार
+</footer>
+
+</body>
+</html>
